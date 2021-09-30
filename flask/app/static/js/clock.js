@@ -6,7 +6,7 @@ const clock = () => {
     let year = current_dt.getFullYear();
     let month = current_dt.getMonth() + 1;
     let date = current_dt.getDate();
-    const weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+    const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     let day = weekday[current_dt.getDay()];
     let hour = current_dt.getHours();
     let min = current_dt.getMinutes();
