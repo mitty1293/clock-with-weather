@@ -5,6 +5,8 @@ import json
 
 @app.route('/')
 def index():
+    url = api.gen_url()
+    data = api.call_api(url)
     return render_template("index.html")
 
 @app.route('/test')
