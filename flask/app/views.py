@@ -6,7 +6,7 @@ import json
 @app.route('/')
 def index():
     weather_endpoint: str = api.gen_endpoint()
-    response: dict = api.call_api(weather_endpoint)
+    all_weather_data: dict = api.call_api(weather_endpoint)
     return render_template("index.html")
 
 @app.route('/test')
