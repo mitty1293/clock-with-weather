@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # _*_ coding: utf-8 _*_
 
+import json
 import requests
 from requests.models import Response
 from . import keys
@@ -11,6 +12,6 @@ def gen_endpoint() -> str:
     return endpoint
 
 def call_api(endpoint: str) -> dict:
-    response: Response = requests.get(endpoint)
-    json_data: dict = response.json()
-    return json_data
+    res_as_json: Response = requests.get(endpoint)
+    res_as_dict: dict = res_as_json.json()
+    return res_as_dict
