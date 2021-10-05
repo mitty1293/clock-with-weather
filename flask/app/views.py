@@ -11,7 +11,7 @@ def index():
 
 @app.route('/test')
 def test():
-    endpoint = api.gen_endpoint()
-    data = api.call_api(endpoint)
-    json_text = json.dumps(data, indent=4)
+    endpoint: str = api.gen_endpoint()
+    data: dict = api.call_api(endpoint)
+    json_text: str = json.dumps(data, indent=4)
     print(json_text)
