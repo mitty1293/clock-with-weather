@@ -5,13 +5,13 @@ import json
 
 @app.route('/')
 def index():
-    url = api.gen_url()
-    data = api.call_api(url)
+    weather_endpoint = api.gen_endpoint()
+    weather_data = api.call_api(weather_endpoint)
     return render_template("index.html")
 
 @app.route('/test')
 def test():
-    url = api.gen_url()
-    data = api.call_api(url)
+    endpoint = api.gen_endpoint()
+    data = api.call_api(endpoint)
     json_text = json.dumps(data, indent=4)
     print(json_text)
