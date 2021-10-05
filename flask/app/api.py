@@ -10,7 +10,7 @@ def gen_endpoint() -> str:
     endpoint: str = url.format(key=keys.API_KEY, lat=keys.LAT, lon=keys.LON)
     return endpoint
 
-def call_api(endpoint: str) -> str:
+def call_api(endpoint: str) -> dict:
     response: Response = requests.get(endpoint)
     json_data: dict = response.json()
     return json_data
