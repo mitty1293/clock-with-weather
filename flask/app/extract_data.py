@@ -3,8 +3,8 @@ import datetime
 def of_hourly(**weather_data: dict) -> list:
     hourly_data: list = []
     for i in range(12):
+        after_i_hour: dict = weather_data['hourly'][i]
         data: dict = {
-            'after_i_hour': weather_data['hourly'][i],
             'dt': datetime.datetime.fromtimestamp(after_i_hour['dt']),
             'temp': after_i_hour['temp'],
             'icon': after_i_hour['weather'][0]['icon'],
@@ -14,5 +14,6 @@ def of_hourly(**weather_data: dict) -> list:
         hourly_data.append(data)
     return hourly_data
 
-def of_daily(**weather_data: dict) :
-    pass
+def of_daily(**weather_data: dict) -> list:
+    daily_data: list = []
+    for i in range()
