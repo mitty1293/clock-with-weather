@@ -8,7 +8,7 @@ def index():
     weather_endpoint: str = api.gen_endpoint()
     all_weather_data: dict = api.call_api(weather_endpoint)
     hourly_data: list = extract_data.of_hourly(**all_weather_data)
-    daily_data = extract_data.of_daily(**all_weather_data)
+    daily_data: list = extract_data.of_daily(**all_weather_data)
     return render_template("index.html")
 
 @app.route('/test')
