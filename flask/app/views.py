@@ -9,6 +9,8 @@ def index():
     all_weather_data: dict = api.call_api(weather_endpoint)
     hourly_data: list = extract_data.of_hourly(**all_weather_data)
     daily_data: list = extract_data.of_daily(**all_weather_data)
+    # ↑ここまで完成。時間データと日データを取得できた。
+    # ↓index.htmlを記載、時間データと日データを埋める箇所を作って、renderでhtmlに渡す。
     return render_template("index.html")
 
 @app.route('/test')
