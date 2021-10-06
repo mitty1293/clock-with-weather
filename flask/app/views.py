@@ -7,8 +7,8 @@ import json
 def index():
     weather_endpoint: str = api.gen_endpoint()
     all_weather_data: dict = api.call_api(weather_endpoint)
-    current_data = extract_data.of_current(**all_weather_data)
-    hourly_data = extract_data.of_hourly(**all_weather_data)
+    hourly_data: list = extract_data.of_hourly(**all_weather_data)
+    daily_data = extract_data.of_daily(**all_weather_data)
     return render_template("index.html")
 
 @app.route('/test')
