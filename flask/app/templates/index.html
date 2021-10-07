@@ -20,8 +20,19 @@
                 <p class="clock_today"></p>
                 <p class="clock_time"></p>
             </div>
-            <div class="row weather">
-                <p class="weather">weather</p>
+            <div class="row weather_hourly">
+                {% for data in hourly_data %}
+                <div class="col-sm-1">
+                    <p>dt: {{data['dt']}}</p>
+                    <p>temp: {{data['temp']}} &#8451;</p>
+                    <img src="{{data['icon']}}">
+                    <p>description: {{data['description']}}</p>
+                    <p>rain: {{data['rain']}} mm</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row weather_daily">
+                15:37
             </div>
             <div class="row">
                 <div class="github_link">

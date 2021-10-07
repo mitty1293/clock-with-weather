@@ -8,7 +8,7 @@ body {
 .clock {
     text-align: center;
 }
-.weather {
+.weather_hourly, .weather_daily {
     text-align: center;
 }
 .github_link {
