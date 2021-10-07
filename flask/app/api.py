@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # _*_ coding: utf-8 _*_
 
-import json
 import requests
 from requests.models import Response
 from . import keys
