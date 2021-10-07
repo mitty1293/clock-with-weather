@@ -22,17 +22,25 @@
             </div>
             <div class="row weather_hourly">
                 {% for data in hourly_data %}
-                <div class="col-sm-1">
-                    <p>dt: {{data['dt']}}</p>
-                    <p>temp: {{data['temp']}} &#8451;</p>
-                    <img src="{{data['icon']}}">
-                    <p>description: {{data['description']}}</p>
-                    <p>rain: {{data['rain']}} mm</p>
+                <div class="col-sm">
+                    <p>{{data['dt']}}</p>
+                    <img src="{{data['icon']}}" width="50px" height="50px">
+                    <p>{{data['temp']}}&#8451;</p>
+                    <p>{{data['rain']}} mm</p>
+                    <!-- {{data['description']}} -->
                 </div>
                 {% endfor %}
             </div>
             <div class="row weather_daily">
-                15:37
+                {% for data in daily_data %}
+                <div class="col-sm">
+                    <p>{{data['dt']}}</p>
+                    <img src="{{data['icon']}}" width="50px" height="50px">
+                    <p>{{data['temp_max']}}&#160;&#047;&#160;{{data['temp_min']}}&#8451;</p>
+                    <p>{{data['rain']}} mm</p>
+                    <!-- {{data['description']}} -->
+                </div>
+                {% endfor %}
             </div>
             <div class="row">
                 <div class="github_link">

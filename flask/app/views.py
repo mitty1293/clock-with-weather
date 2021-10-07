@@ -9,7 +9,7 @@ def index():
     all_weather_data: dict = api.call_api(weather_endpoint)
     hourly_data: list = extract_data.of_hourly(**all_weather_data)
     daily_data: list = extract_data.of_daily(**all_weather_data)
-    return render_template("index.html", hourly_data=hourly_data)
+    return render_template("index.html", hourly_data=hourly_data, daily_data=daily_data)
 
 @app.route('/test')
 def test():

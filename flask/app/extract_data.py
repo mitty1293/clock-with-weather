@@ -33,7 +33,7 @@ def of_daily(**weather_data: dict) -> list:
             'dt': convert_unixtime_into_jst(daily_property['dt']).strftime('%m/%d %a'),
             'temp_max': round_to_int(daily_property['temp']['max']),
             'temp_min': round_to_int(daily_property['temp']['min']),
-            'icon': daily_property['weather'][0]['icon'],
+            'icon': get_icon_url(daily_property['weather'][0]['icon']),
             'description': daily_property['weather'][0]['description'],
             'rain': daily_property.get('rain', 0)
         }
