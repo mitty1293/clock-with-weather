@@ -8,6 +8,8 @@ services:
         container_name: flask_clock_with_weather
         volumes: 
             - ./flask/app:/usr/src/app
+        secrets:
+            - weather_secrets
         networks: 
             - net_clock_with_weather
         command: /usr/local/bin/gunicorn -w 2 -b 0.0.0.0:8000 app:app --reload
@@ -21,6 +23,9 @@ services:
             - "8006:80"
         networks: 
             - net_clock_with_weather
+secrets:
+    weather_secrets:
+        file: ./secret.txt
 networks: 
     net_clock_with_weather:
         driver: bridge
