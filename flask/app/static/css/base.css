@@ -14,6 +14,12 @@ body {
     flex-wrap: nowrap;
     overflow-x: scroll;
     white-space: nowrap;
+    scroll-behavior:smooth;
+    scroll-snap-type:inline;
+    margin-top: 1.5rem;
+}
+.weather_element {
+    scroll-snap-align:center;
 }
 .github_link {
     text-align: center;
