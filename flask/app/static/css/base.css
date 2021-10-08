@@ -10,9 +10,7 @@ body {
 }
 .weather_hourly, .weather_daily {
     text-align: center;
-}
-.temp_min {
-    color: gray;
+    font-size: 0.85rem;
 }
 .github_link {
     text-align: center;
