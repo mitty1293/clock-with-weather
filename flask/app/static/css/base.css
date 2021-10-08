@@ -11,6 +11,9 @@ body {
 .weather_hourly, .weather_daily {
     text-align: center;
     font-size: 0.85rem;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 .github_link {
     text-align: center;
