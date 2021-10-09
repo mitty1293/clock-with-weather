@@ -2,12 +2,14 @@
 # _*_ coding: utf-8 _*_
 
 import requests
+import configparser
 from requests.models import Response
-from . import keys
 
 def gen_endpoint() -> str:
+    config = configparser.ConfigParser()
+    config.read('/run/secrets/weather_secrets')
     url: str = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&units=metric&appid={key}"
-    endpoint: str = url.format(key=keys.API_KEY, lat=keys.LAT, lon=keys.LON)
+    endpoint: str = url.format(key=config['API']['KEY'], lat=config['coordinates']['LAT'], lon=config['coordinates']['LON'])
     return endpoint
 
 def call_api(endpoint: str) -> dict:

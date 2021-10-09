@@ -1,4 +1,3 @@
 .ipynb_checkpoints/
 __pycache__/
-keys.py
-secret.txt
+weather_secrets.txt
