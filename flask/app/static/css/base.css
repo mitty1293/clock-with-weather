@@ -8,6 +8,9 @@ body {
 .clock {
     text-align: center;
 }
+.clock_time {
+    font-size: 4.0rem;
+}
 .weather_hourly, .weather_daily {
     text-align: center;
     font-size: 0.85rem;
