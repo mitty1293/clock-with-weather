@@ -27,7 +27,6 @@
                     <div><img src="{{data['icon']}}" width="50px" height="50px"></div>
                     <div>{{data['temp']}}&#8451;</div>
                     <div>{% if data['rain']!=0 %}{{data['rain']}} mm{% endif %}</div>
-                    <!-- {{data['description']}} -->
                 </div>
                 {% endfor %}
             </div>
@@ -38,7 +37,6 @@
                     <div><img src="{{data['icon']}}" width="50px" height="50px"></div>
                     <div>{{data['temp_max']}}&#160;&#047;&#160;{{data['temp_min']}}&#8451;</div>
                     <div>{% if data['rain']!=0 %}{{data['rain']}} mm{% endif %}</div>
-                    <!-- {{data['description']}} -->
                 </div>
                 {% endfor %}
             </div>

@@ -21,7 +21,8 @@ def of_hourly(**weather_data: dict) -> list:
             'temp': round_to_int(hourly_property['temp']),
             'icon': get_icon_url(hourly_property['weather'][0]['icon']),
             'description': hourly_property['weather'][0]['description'],
-            'rain': hourly_property.get('rain', {'1h': 0}).get('1h')
+            'rain': hourly_property.get('rain', {'1h': 0}).get('1h'),
+            'pop': hourly_property['pop']
         }
         hourly_data.append(data)
     return hourly_data
@@ -35,7 +36,8 @@ def of_daily(**weather_data: dict) -> list:
             'temp_min': round_to_int(daily_property['temp']['min']),
             'icon': get_icon_url(daily_property['weather'][0]['icon']),
             'description': daily_property['weather'][0]['description'],
-            'rain': daily_property.get('rain', 0)
+            'rain': daily_property.get('rain', 0),
+            'pop': daily_property['pop']
         }
         daily_data.append(data)
     return daily_data
