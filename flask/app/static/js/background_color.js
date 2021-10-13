@@ -1,9 +1,3 @@
-// ・現在時刻をclock.jsと同様に普通に取得する。
-// ・{{data['icon']}}から現在天気を取得する。
-// ・以下URLの方法で背景色を変えていく。
-// https://www.nishishi.com/javascript-tips/doc-bgcolor.html
-// ・できたら、横棒を透過で入れる。（figma参照）
-
 // Get the current date and time
 const current_dt = new Date();
 const current_hour = current_dt.getHours();
