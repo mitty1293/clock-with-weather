@@ -11,6 +11,7 @@ const current_hour = current_dt.getHours();
 if (current_hour >= 19) {
     document.body.style.backgroundColor = "#808080";
     // document.body.style.backgroundImage = "url('img_tree.png')";
+    // document.body.style.background = "linear-gradient(to right, blue, pink)";
 } else if (current_hour >= 16) {
     document.body.style.backgroundColor = "#FF9966";
 } else if (current_hour >= 10) {
